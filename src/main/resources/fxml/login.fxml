@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+   <children>
+      <Label contentDisplay="CENTER" layoutX="238.0" layoutY="40.0" text="Авторизация">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="117.0" layoutY="138.0" text="Логин">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="113.0" layoutY="218.0" text="Пароль" textFill="#012208">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="login" alignment="CENTER" layoutX="222.0" layoutY="136.0" prefHeight="29.0" prefWidth="196.0" />
+      <TextField fx:id="password" alignment="CENTER" layoutX="222.0" layoutY="215.0" prefHeight="29.0" prefWidth="196.0" />
+      <Button alignment="CENTER" layoutX="270.0" layoutY="300.0" mnemonicParsing="false" onAction="#handleEnter" prefHeight="29.0" prefWidth="101.0" text="Войти">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+   </children>
+   <effect>
+      <Blend />
+   </effect>
+</AnchorPane>

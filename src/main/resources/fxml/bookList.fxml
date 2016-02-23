@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mouseTransparent="false" prefHeight="580.0" prefWidth="942.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BookListController">
+  <children>
+    <SplitPane dividerPositions="0.14013840830449828" focusTraversable="true" orientation="VERTICAL" prefHeight="580.0" prefWidth="942.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <items>
+        <AnchorPane maxHeight="78.0" minHeight="0.0" minWidth="0.0" prefHeight="78.0" prefWidth="940.0">
+          <children>
+            <TextField fx:id="findString" alignment="CENTER" layoutX="327.0" layoutY="37.0" prefWidth="200.0" />
+            <Label layoutX="27.0" layoutY="37.0" prefWidth="170.0" text="Искать по:">
+              <font>
+                <Font name="Century Gothic" size="18.0" />
+              </font>
+            </Label>
+            <ComboBox fx:id="box" layoutX="197.0" layoutY="37.0" promptText="названию">
+              <items>
+                <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="названию" />
+                  <String fx:value="автору" />
+                  <String fx:value="году" />
+                </FXCollections>
+              </items>
+            </ComboBox>
+            <Button layoutX="552.0" layoutY="37.0" mnemonicParsing="false" onAction="#handleFind" prefHeight="21.999900000002526" prefWidth="86.0" text="искать" />
+          </children>
+        </AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+          <children>
+            <SplitPane dividerPositions="0.7366737739872068" focusTraversable="false" prefHeight="477.0" prefWidth="940.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <items>
+                <AnchorPane maxWidth="-1.0" minHeight="0.0" minWidth="0.0" prefHeight="491.0" prefWidth="641.0">
+                           <children>
+                              <TableView fx:id="tableBook" layoutX="82.0" prefHeight="491.0" prefWidth="687.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columns>
+                                  <TableColumn fx:id="author" maxWidth="165.0" minWidth="151.0" prefWidth="151.0" text="Автор" />
+                                  <TableColumn fx:id="name" maxWidth="500.0" minWidth="314.0" prefWidth="314.0" text="Название" />
+                                    <TableColumn fx:id="year" maxWidth="120.0" minWidth="70.0" prefWidth="90.0" text="Год" />
+                                    <TableColumn fx:id="pageCount" maxWidth="160.0" minWidth="90.0" prefWidth="130.0" text="Кол-во стр." />
+                                </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                           </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="492.0" prefWidth="366.0">
+                  <children>
+                    <GridPane id="GridPane" alignment="CENTER" prefHeight="492.0" prefWidth="244.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                      <children>
+                        <Button fx:id="buttonOpen" contentDisplay="CENTER" maxHeight="35.0" maxWidth="213.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleOpen" prefHeight="35.0" prefWidth="200.0" text="Открыть" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                          <GridPane.margin>
+                            <Insets />
+                          </GridPane.margin>
+                        </Button>
+                        <Label fx:id="nameLabel" alignment="CENTER" blendMode="SRC_OVER" cache="true" cacheHint="DEFAULT" contentDisplay="CENTER" depthTest="INHERIT" ellipsisString="" prefHeight="213.0" prefWidth="251.0" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" underline="false" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                          <font>
+                            <Font name="Bookman Old Style" size="16.0" fx:id="x1" />
+                          </font>
+                        </Label>
+                        <Label fx:id="authorLabel" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="37.0" prefWidth="251.0" text="" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
+                          <font>
+                            <Font name="Bookman Old Style" size="15.0" />
+                          </font>
+                        </Label>
+                        <Label fx:id="yearLabel" alignment="TOP_CENTER" contentDisplay="CENTER" font="$x1" prefHeight="46.0" prefWidth="251.0" text="" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                      </children>
+                      <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                      </columnConstraints>
+                      <rowConstraints>
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints fillHeight="true" minHeight="10.0" valignment="CENTER" vgrow="SOMETIMES" />
+                      </rowConstraints>
+                    </GridPane>
+                  </children>
+                </AnchorPane>
+              </items>
+            </SplitPane>
+          </children>
+        </AnchorPane>
+      </items>
+    </SplitPane>
+  </children>
+</AnchorPane>

@@ -1,0 +1,12 @@
+**/.idea/
+**/target/
+*.iml
+*config.properties
+*hibernate.cfg.xml
+imageField.fxml
+applicationContext.xml
+
+/MyRepo/ClientReader/temp.txt
+/MyRepo/ClientReader/test.txt
+/MyRepo/CheckBooks-master_for_linux/src/main/resources/config.properties
+/MyRepo/CheckBooks-master_for_linux/src/main/resources/hibernate.cfg.xml

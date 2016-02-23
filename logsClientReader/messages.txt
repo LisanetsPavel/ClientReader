@@ -1,0 +1,14 @@
+2015-09-30 11:52:25 ERROR RestBookClient:80 - Unexpected character (<) at position 2.
+2015-09-30 11:52:35 ERROR RestBookClient:80 - Unexpected character (<) at position 2.
+2015-09-30 11:53:36 ERROR RestBookClient:80 - Unexpected character (<) at position 2.
+2015-09-30 11:54:27 ERROR RestBookClient:80 - Unexpected character (<) at position 2.
+2015-09-30 11:58:16 ERROR RestBookClient:80 - Unexpected character (<) at position 2.
+2015-09-30 12:02:30 ERROR RestBookClient:80 - Unexpected character (<) at position 2.
+2015-09-30 12:08:26 ERROR RestBookClient:80 - Unexpected character (<) at position 2.
+2015-09-30 12:13:54 ERROR RestBookClient:80 - Unexpected character (<) at position 2.
+2015-09-30 12:17:30 ERROR RestBookClient:80 - Unexpected character (<) at position 2.
+2015-09-30 12:24:48 ERROR RestBookClient:80 - Unexpected character (<) at position 2.
+2015-09-30 12:26:19 ERROR BookListController:117 - org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1] failed: В соединении отказано
+2015-09-30 12:28:11 ERROR ClientApp:37 - java.lang.NullPointerException
+2015-09-30 12:28:48 ERROR RestBookClient:80 - Unexpected character (<) at position 2.
+2015-09-30 12:30:25 ERROR RestBookClient:80 - Unexpected character (<) at position 2.
